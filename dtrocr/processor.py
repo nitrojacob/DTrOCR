@@ -46,7 +46,7 @@ class DTrOCRProcessor:
         ) if texts is not None else None
 
         image_inputs = self.vit_processor(
-            images, input_data_format=input_data_format, *args, **kwargs
+            images, data_format=input_data_format, *args, **kwargs
         ) if images is not None else None
 
         return DTrOCRProcessorOutput(
